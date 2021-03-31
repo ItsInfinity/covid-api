@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19-tracker</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Covid-19-Tracker</h1>
+    <div>
+      <form action="" method="POST" id="inputForm">
+        <h2>Enter Your Country Name</h2>
+        <input type="text" name="country" id="inputCountry" />
+        <button type="submit" id="buttonSubmit">Go</button>
+      </form>
+    </div>
+
+    <div class="data">
+      <h3>Daily Reports <span id="getDate"></span></h3>
+      <p><span id="country"></span> Country</p>
+      <p><span id="confirmed"></span> Confirmed</p>
+      <p><span id="recovered"></span> Recovered</p>
+      <p><span id="deaths"></span> Fatalities</p>
+      <p><span id="active"></span> Active</p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
