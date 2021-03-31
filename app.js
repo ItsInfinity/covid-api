@@ -11,6 +11,20 @@ const active = document.getElementById("active");
 const inputCountry = document.querySelector("#inputCountry");
 const buttonSubmit = document.querySelector("#buttonSubmit");
 const getDate = document.getElementById("getDate");
+const loader = document.getElementById("loader");
+const container = document.getElementById("container");
+const body = document.querySelector(".background");
+
+function loading() {
+  body.classList.add("background");
+  loader.hidden = false;
+  container.hidden = true;
+}
+function complete() {
+  body.classList.remove("background");
+  container.hidden = false;
+  loader.hidden = true;
+}
 
 function getData() {
   console.log(inputCountry);
@@ -35,6 +49,7 @@ fetch(apiURL, {
   },
 })
   .then((response) => {
+    loading();
     return response.json();
   })
   .then((data) => {
@@ -43,17 +58,25 @@ fetch(apiURL, {
 
     updateDate();
     getData();
+    complete();
   })
   .catch((err) => {
     console.error(err);
   });
-var inputValue;
+//var inputValue;
+
+/*
 document.getElementById("inputForm").onsubmit = function () {
   inputValue = inputCountry.value;
-  console.log(inputValue);
+  console.log(inputCountry.value);
   //country = inputvalue;
   // return false;
 };
+*/
+buttonSubmit.addEventListener("click", function () {
+  console.log(inputCountry.value);
+  const input2 = inputCountry.value;
+});
 
 /*
 async function getData() {

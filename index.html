@@ -9,23 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <h1>Covid-19-Tracker</h1>
-    <div>
-      <form action="" method="POST" id="inputForm">
-        <h2>Enter Your Country Name</h2>
-        <input type="text" name="country" id="inputCountry" />
-        <button type="submit" id="buttonSubmit">Go</button>
-      </form>
-    </div>
+  <body onload="loading();" class="background">
+    <div id="container">
+      <h1>Covid-19-Tracker</h1>
+      <div>
+        <form action="" method="POST">
+          <h2>Enter Country Name</h2>
+          <input type="text" name="country" id="inputCountry" autocomplete="off" />
+          <button id="buttonSubmit">Go</button>
+        </form>
+      </div>
 
-    <div class="data">
-      <h3>Daily Reports <span id="getDate"></span></h3>
-      <p><span id="country"></span> Country</p>
-      <p><span id="confirmed"></span> Confirmed</p>
-      <p><span id="recovered"></span> Recovered</p>
-      <p><span id="deaths"></span> Fatalities</p>
-      <p><span id="active"></span> Active</p>
+      <div class="data">
+        <h3>Daily Reports <span id="getDate"></span></h3>
+        <p><span id="country"></span> Country</p>
+        <p><span id="confirmed"></span> Confirmed</p>
+        <p><span id="recovered"></span> Recovered</p>
+        <p><span id="deaths"></span> Fatalities</p>
+        <p><span id="active"></span> Active</p>
+      </div>
+    </div>
+    <div class="cssload-thecube" id="loader">
+      <div class="cssload-cube cssload-c1"></div>
+      <div class="cssload-cube cssload-c2"></div>
+      <div class="cssload-cube cssload-c4"></div>
+      <div class="cssload-cube cssload-c3"></div>
     </div>
     <script src="app.js"></script>
   </body>
